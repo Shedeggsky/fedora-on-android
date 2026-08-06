@@ -20,7 +20,7 @@ esac
 ROOTFS_URL="https://images.linuxcontainers.org/images/fedora/44/${ARCH_URL}/default/date-latest/rootfs.tar.xz"
 
 echo "[+] Downloading Fedora 44"
-wget --show-progress -q -O "$HOME/rootfs.tar.xz" "$ROOTFS_URL"
+wget --show-progress -O "$HOME/rootfs.tar.xz" "$ROOTFS_URL"
 
 echo "[+] Extracting rootfs into $FEDORA_DIR"
 tar -xf "$HOME/rootfs.tar.xz" -C "$FEDORA_DIR" --exclude='dev' || true
