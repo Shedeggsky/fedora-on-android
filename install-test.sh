@@ -33,7 +33,6 @@ echo "[+] Found build: ${LATEST_BUILD}"
 
 echo "[+] Downloading Fedora 44"
 wget --show-progress -O "$HOME/rootfs.tar.xz" "$ROOTFS_URL"
-rm -rf "$FEDORA_DIR"
 mkdir -p "$FEDORA_DIR"
 
 echo "[+] Extracting rootfs into $FEDORA_DIR"
