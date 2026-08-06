@@ -30,12 +30,12 @@ fi
 ROOTFS_URL="${BASE_URL}/${LATEST_BUILD}/rootfs.tar.xz"
 
 echo "[+] Found build: ${LATEST_BUILD}"
-echo "[+] Downloading Fedora 44 RootFS (~70MB)..."
 
 echo "[+] Downloading Fedora 44"
 wget --show-progress -O "$HOME/rootfs.tar.xz" "$ROOTFS_URL"
 
 echo "[+] Extracting rootfs into $FEDORA_DIR"
+mkdir -p "$FEDORA_DIR"
 tar -xf "$HOME/rootfs.tar.xz" -C "$FEDORA_DIR" --exclude='dev' || true
 rm "$HOME/rootfs.tar.xz"
 
