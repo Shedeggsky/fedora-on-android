@@ -37,7 +37,8 @@ mkdir -p "$FEDORA_DIR"
 
 echo "[+] Extracting rootfs into $FEDORA_DIR"
 mkdir -p "$FEDORA_DIR"
-tar -xf "$TARBALL" -C "$FEDORA_DIR" --overwrite --hard-dereference --exclude='dev' --exclude='proc' --exclude='sys'
+proot -0 tar -xf "$TARBALL" -C "$FEDORA_DIR" --overwrite
+
 
 echo "nameserver 8.8.8.8" > "$FEDORA_DIR/etc/resolv.conf"
 echo "nameserver 1.1.1.1" >> "$FEDORA_DIR/etc/resolv.conf"
