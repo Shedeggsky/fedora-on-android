@@ -1,7 +1,7 @@
 # Finally fixed
 # Fedora 44 on Termux (Android Emulation)
 
-A automated script to install and run a **Fedora 44 on Android using proot.
+A automated script to install and run a **Fedora 44 on Android** using proot.
 
 Uses official Linux Containers rootfs and pre-configured with `tigervnc-server` setup on first boot.
 
