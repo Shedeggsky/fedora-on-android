@@ -1,3 +1,4 @@
+# Finally fixed
 # Fedora 44 on Termux (Android Emulation)
 
 A automated script to install and run a **Fedora 44 on Android using proot.
