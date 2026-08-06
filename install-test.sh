@@ -4,7 +4,7 @@ set -e
 echo "install script executed"
 
 pkg update -y
-pkg install -y proot wget tar xz-utils
+pkg install -y proot curl wget tar xz-utils
 
 FEDORA_DIR="$HOME/fedora-fs"
 mkdir -p "$FEDORA_DIR"
@@ -33,10 +33,12 @@ echo "[+] Found build: ${LATEST_BUILD}"
 
 echo "[+] Downloading Fedora 44"
 wget --show-progress -O "$HOME/rootfs.tar.xz" "$ROOTFS_URL"
+rm -rf "$FEDORA_DIR"
+mkdir -p "$FEDORA_DIR"
 
 echo "[+] Extracting rootfs into $FEDORA_DIR"
 mkdir -p "$FEDORA_DIR"
-tar -xf "$HOME/rootfs.tar.xz" -C "$FEDORA_DIR" --exclude='dev' || true
+tar -xf "$HOME/rootfs.tar.xz" -C "$FEDORA_DIR" --overwrite --exclude='dev' || true
 rm "$HOME/rootfs.tar.xz"
 
 echo "nameserver 8.8.8.8" > "$FEDORA_DIR/etc/resolv.conf"
