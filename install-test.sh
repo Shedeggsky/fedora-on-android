@@ -44,6 +44,7 @@ rm -rf "$FEDORA_DIR/etc/resolv.conf"
 echo "nameserver 8.8.8.8" > "$FEDORA_DIR/etc/resolv.conf"
 echo "nameserver 1.1.1.1" >> "$FEDORA_DIR/etc/resolv.conf"
 
+mkdir -p "$FEDORA_DIR/root"
 chmod -R 777 "$FEDORA_DIR/root" 2>/dev/null || true
 rm -f "$FEDORA_DIR/root/first_boot.sh"
 
