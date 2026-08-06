@@ -17,7 +17,20 @@ case "$ARCH" in
     *) echo "[-] Unsupported arch: $ARCH"; exit 1 ;;
 esac
 
-ROOTFS_URL="https://images.linuxcontainers.org/images/fedora/44/${ARCH_URL}/default/date-latest/rootfs.tar.xz"
+BASE_URL="https://images.linuxcontainers.org/images/fedora/44/${ARCH_URL}/default"
+
+echo "[+] Finding latest Fedora 44 build"
+LATEST_BUILD=$(curl -sL "$BASE_URL/" | grep -oE '20[0-9]{6}_[0-9]{2}:[0-9]{2}' | tail -n 1)
+
+if [ -z "$LATEST_BUILD" ]; then
+    echo "[-] Error: Couldn't parse latest build timestamp from LXC mirror."
+    exit 1
+fi
+
+ROOTFS_URL="${BASE_URL}/${LATEST_BUILD}/rootfs.tar.xz"
+
+echo "[+] Found build: ${LATEST_BUILD}"
+echo "[+] Downloading Fedora 44 RootFS (~70MB)..."
 
 echo "[+] Downloading Fedora 44"
 wget --show-progress -O "$HOME/rootfs.tar.xz" "$ROOTFS_URL"
