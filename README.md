@@ -12,5 +12,26 @@ Open **Termux** and run **one** of the following commands to install Fedora 44:
 
 ### Using `wget`:
 ```bash
-wget -qO- [https://raw.githubusercontent.com/Shedeggsky/fedora-on-android/main/install-test.sh](https://raw.githubusercontent.com/Shedeggsky/fedora-on-android/main/install-test.sh) | bash
+wget -qO- "https://raw.githubusercontent.com/Shedeggsky/fedora-on-android/main/install-test.sh" | bash
+```
+### How to Run
+Once installation finishes, launch Fedora from your Termux home directory anytime:
+```
+./fedora.sh
+```
+### Exit Command
+To exit back to Termux from inside Fedora, simply type:
+```
+exit
+```
+### To update and install packages
+To update all packages, use this command.
+```
+dnf update -y
+```
 
+To install packages, use this command.
+```
+dnf install <package>
+```
+To find packages, you can either search on Google or https://packages.fedoraproject.org/.
