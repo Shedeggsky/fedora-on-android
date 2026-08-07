@@ -2,9 +2,9 @@
 
 A automated script to install and run a **Fedora 44 session on Android** using proot.
 
-Preview:<img src="Screenshot_20260807_163729_Termux.jpg" alt="Termux Screenshot" width="650">
-    
-    
+<img src="Screenshot_20260807_163729_Termux.jpg" alt="Termux Screenshot" width="650">
+
+Preview:
 
 Uses official Linux Containers rootfs with `tigervnc-server` setup on first boot. 
 
