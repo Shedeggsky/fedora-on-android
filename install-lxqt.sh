@@ -90,12 +90,12 @@ fi
 echo ""
 echo "=================================================="
 echo " Fedora 44"
-echo " This build is included with LXQt.
+echo " This build is included with LXQt."
 echo " To install packages: dnf install <package>"
 echo " To start VNC server: vncserver"
 echo " To exit: exit"
 echo "=================================================="
-echo ""
+echo "
 EOF
 
 LAUNCHER="$HOME/fedora-lxqt.sh"
