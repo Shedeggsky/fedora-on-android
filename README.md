@@ -1,7 +1,6 @@
 # Fedora 44 on Termux (Android Emulation)
 
 A automated script to install and run a **Fedora 44 session on Android** using proot.
-
     Preview:
     ![Termux Screenshot](Screenshot_20260807_163729_Termux.jpg)
     
