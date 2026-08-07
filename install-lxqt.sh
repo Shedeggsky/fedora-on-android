@@ -6,7 +6,7 @@ echo "Install script executed - LXQt - Made by Shedeggsky (nSore)"
 pkg update -y
 pkg install -y proot curl wget tar xz-utils
 
-FEDORA_DIR="$HOME/fedora-fs"
+FEDORA_DIR="$HOME/fedora-lxqt-fs"
 mkdir -p "$FEDORA_DIR"
 
 ARCH=$(uname -m)
