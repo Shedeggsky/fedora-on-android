@@ -3,7 +3,7 @@
 Finally fixed
 A automated script to install and run a **Fedora 44 on Android** using proot.
 
-Uses official Linux Containers rootfs and pre-configured with `tigervnc-server` setup on first boot.
+Uses official Linux Containers rootfs with `tigervnc-server` setup on first boot. 
 
 ---
 
@@ -11,10 +11,17 @@ Uses official Linux Containers rootfs and pre-configured with `tigervnc-server` 
 
 Open **Termux** and run **one** of the following commands to install Fedora 44:
 
-### Using `wget`:
-```bash
+### Using `wget`
+```
 wget -qO- "https://raw.githubusercontent.com/Shedeggsky/fedora-on-android/main/install.sh" | bash
 ```
+
+## Installation with LXQt
+### Using `wget`
+```
+wget -qO- "https://raw.githubusercontent.com/Shedeggsky/fedora-on-android/main/install-lxqt.sh" | bash
+```
+
 ### How to Run
 Once installation finishes, launch Fedora from your Termux home directory anytime:
 ```
