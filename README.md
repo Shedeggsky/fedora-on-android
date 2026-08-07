@@ -15,11 +15,12 @@ Open **Termux** and run **one** of the following commands to install Fedora 44:
 wget -qO- "https://raw.githubusercontent.com/Shedeggsky/fedora-on-android/main/install.sh" | bash
 ```
 
-## Installation with LXQt
+## Installation with LXQt (Testing)
 ### Using `wget`
 ```
 wget -qO- "https://raw.githubusercontent.com/Shedeggsky/fedora-on-android/main/install-lxqt.sh" | bash
 ```
+## Tips
 
 ### How to Run
 Once installation finishes, launch Fedora from your Termux home directory anytime:
